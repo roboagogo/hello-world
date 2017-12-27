@@ -24,6 +24,6 @@ deploy:
     - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
-        repository: dotnetcoreservices/hello-world
+        repository: roboagogo/hello-world
         registry: https://registry.hub.docker.com
         entrypoint: "/pipeline/source/app/docker_entrypoint.sh"
