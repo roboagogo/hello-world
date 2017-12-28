@@ -30,8 +30,12 @@ namespace HelloWorld {
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync(string.Format("Hello, world!\n" +
-                    "Env:{0}\n" + "App:{1}\n" + "contentRootFileProvider:{2}\n" + "contentRootPath:{3}\n" + "webRootFileProvider:{4}\n" + "webRootPath:{5}\n", 
-                    env.EnvironmentName, env.ApplicationName, env.ContentRootFileProvider, env.ContentRootPath, env.WebRootFileProvider, env.WebRootPath));
+                    "Env:{0}\n" + "App:{1}\n" + "contentRootFileProvider:{2}\n" + "contentRootPath:{3}\n" + "webRootFileProvider:{4}\n" + "webRootPath:{5}\n"
+                    + "appServices:{6}\n" + "appProperties:{7}\n"
+                    + "loggerFactory:{8}\n", 
+                    env.EnvironmentName, env.ApplicationName, env.ContentRootFileProvider, env.ContentRootPath, env.WebRootFileProvider, env.WebRootPath,
+                    appServices.ToString(), appProperties.ToString(),
+                    loggerFactory.ToString()));
             });
       }
   }   
